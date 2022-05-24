@@ -4,6 +4,8 @@ import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import ItemsCount from '../ItemCounts/ItemCounts';
+
 
 const bull = (
   <Box
@@ -14,7 +16,10 @@ const bull = (
   </Box>
 );
 
+
+
 export default function BasicCard(props) {
+
   return (
     <Card sx={{ minWidth: 275 }}>
       <CardContent>
@@ -25,6 +30,7 @@ export default function BasicCard(props) {
           {props.texto2}
         </Typography>
       </CardContent>
+        <ItemsCount/>
       <CardActions>
         <Button size="small">Mas</Button>
       </CardActions>
