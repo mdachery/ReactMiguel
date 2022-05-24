@@ -5,6 +5,7 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
+import CartWidget from '../CartWidget/CartWidget'
 
 const NavBar = () => {
     return (
@@ -24,6 +25,11 @@ const NavBar = () => {
               News
             </Typography>
             <Button color="inherit">Login</Button>
+
+              <Button color="inherit">
+                <CartWidget/>
+              </Button>
+
           </Toolbar>
         </AppBar>
       </Box>
