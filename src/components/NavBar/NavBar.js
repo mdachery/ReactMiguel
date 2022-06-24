@@ -6,6 +6,7 @@ import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import CartWidget from '../CartWidget/CartWidget'
+import { Link } from 'react-router-dom';
 
 const NavBar = () => {
     return (
@@ -21,9 +22,31 @@ const NavBar = () => {
             >
               <MenuIcon />
             </IconButton>
+            
+            <Link to='/'>
+              <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                Home_
+               </Typography>
+            </Link>
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-              News
-            </Typography>
+                Productos>
+               </Typography>
+            <Link to='/ProductsByCategory/pantalon'>
+              <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                Pantalon /
+               </Typography>
+            </Link>
+            <Link to='/ProductsByCategory/remera'>
+              <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                Remera /
+               </Typography>
+            </Link>
+            <Link to='/ProductsByCategory/campera'>
+              <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                Campera
+               </Typography>
+            </Link>
+
             <Button color="inherit">Login</Button>
 
               <Button color="inherit">

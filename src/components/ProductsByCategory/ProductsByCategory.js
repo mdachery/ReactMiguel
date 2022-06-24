@@ -2,13 +2,16 @@ import React, { useEffect, useState } from "react"
 import BasicCard from "../Cards/Cards"
 import { Grid } from "@mui/material"
 import productos from "../../utils/productsMocks"
+import { useParams } from "react-router-dom"
 
 
 
 
-const ItemsListContainer = () => {
+const ProductsByCategory = () => {
 
     const [products, setProducts] = useState([])
+
+    const { category } = useParams ()
    
 
 const getProducts = () => {
@@ -21,16 +24,26 @@ const getProducts = () => {
 
 useEffect (() => {
 
+    setProducts ([])
     getProducts ()
     .then ((response) => {
-        setProducts(response)
+        //setProducts(response)
+        filterByCategory (response)
     })
     .catch ((err) => {
         console.log("Catch fallo", err)
     })
 
-}, [])
+}, [category])
 
+const filterByCategory = (array) => {
+    return array.map ( (item) => {
+        if (item.category == category) {
+            return setProducts (products => [...products, item])
+        }
+    }
+    )
+}
 
 
     return (
@@ -58,4 +71,4 @@ useEffect (() => {
 
     }
 
-export default ItemsListContainer
+export default ProductsByCategory

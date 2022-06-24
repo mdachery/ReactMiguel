@@ -5,6 +5,7 @@ import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import ItemsCount from '../ItemCounts/ItemCounts';
+import { Link } from 'react-router-dom';
 
 
 const bull = (
@@ -28,6 +29,9 @@ export default function BasicCard(props) {
         </Typography>
         <Typography variant="body2">
           {props.texto2}
+        </Typography>
+        <Typography variant="body2">
+          <Link to={`/product/${props.id}`}><h5>Ver Detalle</h5></Link>
         </Typography>
       </CardContent>
         <ItemsCount/>
