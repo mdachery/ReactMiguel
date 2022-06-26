@@ -1,29 +1,39 @@
 import { useState } from 'react';
 
 
-const ItemsCount= () => {
+const ItemsCount= ({setShowButton}) => {
 
-    const [count, setCount] = useState (0)
+    const addToCart = () => {
+        return (
+            console.log ("Cantidad: ", cantidad)
+        )
+    }
+
+    const [cantidad, setCantidad] = useState (1)
+
 
     const addCount = () => {
 
-    setCount(count + 1)
+        setCantidad (cantidad + 1)
 
     }
 
     const subCount = () => {
 
-        setCount(count - 1)
+        setCantidad (cantidad - 1)
 
     }
     
     return (
 
-        <div>
-            <button onClick={subCount} disabled={count == 0}>-</button>
-            <p>{count}</p>
+        <>
+        <div style={{display: 'flex', justifyContent: 'center'}}>
+            <button onClick={subCount} disabled={cantidad == 0}>-</button>
+            <p style={{margin: '0 10px'}}>{cantidad}</p>
             <button onClick={addCount}>+</button>
         </div>
+        <button onClick={() => setShowButton(true)}>Agregar producto</button>
+        </>
 
 
     )

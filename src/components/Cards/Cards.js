@@ -4,7 +4,6 @@ import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import ItemsCount from '../ItemCounts/ItemCounts';
 import { Link } from 'react-router-dom';
 
 
@@ -34,7 +33,7 @@ export default function BasicCard(props) {
           <Link to={`/product/${props.id}`}><h5>Ver Detalle</h5></Link>
         </Typography>
       </CardContent>
-        <ItemsCount/>
+
       <CardActions>
         <Button size="small">Mas</Button>
       </CardActions>
