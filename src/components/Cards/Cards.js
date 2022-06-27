@@ -1,33 +1,28 @@
-import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { Link } from 'react-router-dom';
+import CartContext from '../../context/CartContext';
+import { useContext } from 'react';
 
 
-const bull = (
-  <Box
-    component="span"
-    sx={{ display: 'inline-block', mx: '2px', transform: 'scale(0.8)' }}
-  >
-    •
-  </Box>
-);
 
 
 
 export default function BasicCard(props) {
 
+  const {addProductToCart} = useContext(CartContext)
+
   return (
     <Card sx={{ minWidth: 275 }}>
       <CardContent>
         <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-          {props.texto1}
+          {props.title}
         </Typography>
         <Typography variant="body2">
-          {props.texto2}
+          {props.precio}
         </Typography>
         <Typography variant="body2">
           <Link to={`/product/${props.id}`}><h5>Ver Detalle</h5></Link>
@@ -35,7 +30,9 @@ export default function BasicCard(props) {
       </CardContent>
 
       <CardActions>
-        <Button size="small">Mas</Button>
+        <Button size="small" onClick={() => addProductToCart(props)}>
+          Agregar al carrito
+        </Button>
       </CardActions>
     </Card>
   );

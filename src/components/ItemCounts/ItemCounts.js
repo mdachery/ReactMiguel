@@ -28,7 +28,7 @@ const ItemsCount= ({setShowButton}) => {
 
         <>
         <div style={{display: 'flex', justifyContent: 'center'}}>
-            <button onClick={subCount} disabled={cantidad == 0}>-</button>
+            <button onClick={subCount} disabled={cantidad == 1}>-</button>
             <p style={{margin: '0 10px'}}>{cantidad}</p>
             <button onClick={addCount}>+</button>
         </div>
