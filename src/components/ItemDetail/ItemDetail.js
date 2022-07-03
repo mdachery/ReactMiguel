@@ -1,8 +1,10 @@
 import ItemsCount from "../ItemCounts/ItemCounts"
 import { useState } from "react"
-import { Link } from "@mui/material"
 import CartContext from '../../context/CartContext';
 import { useContext } from 'react';
+import { Link } from "react-router-dom";
+
+
 
 const ItemDetail = ({data}) => {
 
@@ -26,7 +28,10 @@ const ItemDetail = ({data}) => {
               />
               </>
             :
-              <button><Link to='/cart' onClick={() => addProductToCart(data)}>Terminar mi compra</Link></button>}
+              <>
+              <button><Link to='/cart' onClick={() => addProductToCart(data)}>Terminar mi compra</Link></button>
+              </>
+              }
 
             
             
