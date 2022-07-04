@@ -31,17 +31,17 @@ const NavBar = () => {
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
                 Productos>
                </Typography>
-            <Link to='/ProductsByCategory/pantalon'>
+            <Link to='/ProductsByCategory/Pantalon'>
               <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
                 Pantalon /
                </Typography>
             </Link>
-            <Link to='/ProductsByCategory/remera'>
+            <Link to='/ProductsByCategory/Remera'>
               <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
                 Remera /
                </Typography>
             </Link>
-            <Link to='/ProductsByCategory/campera'>
+            <Link to='/ProductsByCategory/Campera'>
               <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
                 Campera
                </Typography>
