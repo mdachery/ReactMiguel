@@ -20,7 +20,7 @@ const NavBar = () => {
               aria-label="menu"
               sx={{ mr: 2 }}
             >
-              <MenuIcon />
+
             </IconButton>
             
             <Link to='/'>
@@ -47,7 +47,6 @@ const NavBar = () => {
                </Typography>
             </Link>
 
-            <Button color="inherit">Login</Button>
 
               <Button color="inherit">
                 <CartWidget/>

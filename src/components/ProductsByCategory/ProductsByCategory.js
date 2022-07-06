@@ -56,7 +56,7 @@ const filterByCategory = (array) => {
 
                     return (
                         <Grid item xs={6} key={item.id}>
-                        <BasicCard texto1={item.title} texto2={item.precio} id={item.id}/>
+                        <BasicCard title={item.title} precio={item.precio} id={item.id} img={item.img}/>
                         </Grid>
                     )
 

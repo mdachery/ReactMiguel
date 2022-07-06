@@ -6,7 +6,7 @@ import Typography from '@mui/material/Typography';
 import { Link } from 'react-router-dom';
 import CartContext from '../../context/CartContext';
 import { useContext } from 'react';
-
+import './Cards.css'
 
 
 
@@ -18,9 +18,10 @@ export default function BasicCard(props) {
   return (
     <Card sx={{ minWidth: 275 }}>
       <CardContent>
-        <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
+        <Typography sx={{ fontSize: 18 }} color="text.secondary" gutterBottom>
           {props.title}
         </Typography>
+        <img class="img" src={props.img}/>
         <Typography variant="body2">
           {props.precio}
         </Typography>

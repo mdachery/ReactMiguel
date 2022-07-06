@@ -64,7 +64,7 @@ useEffect (() => {
 
                     return (
                         <Grid item xs={6} key={item.id}>
-                        <BasicCard title={item.title} precio={item.precio} id={item.id} category={item.category}/>
+                        <BasicCard title={item.title} precio={item.precio} id={item.id} category={item.category} img={item.img}/>
                         </Grid>
                     )
 

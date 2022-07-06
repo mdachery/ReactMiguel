@@ -16,6 +16,7 @@ const ItemDetail = ({data}) => {
         <div>
             Informacion del Producto
             <h2>{data.title}</h2>
+            <img class="img" src={data.img}/>
             <h3>Precio: {data.precio}</h3>
             <h4>Stock: {data.stock}</h4>
             
